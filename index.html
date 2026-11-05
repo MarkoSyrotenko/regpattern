@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <form action="" method="post">
+            <div>
+                <div>Password (8-20 characters)</div>
+                <input type="text" name="log" id="login"
+                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])\S{8,20}">
+                <span id="error">This password is too weak</span>
+
+                <div>DD.MM.YYYY date (2024-2099)</div>
+                <input type="text" name="log" id="login"
+                pattern="^(3[0-1]|0[1-9]|[1-2][0-9])\.(1[0-2]|0[1-9])\.20(2[4-9]|[3-9][0-9])$">
+                <span id="error">Invalid date</span>
+
+                <div>Username</div>
+                <input type="text" name="log" id="login"
+                pattern="^[a-zA-Z0-9](_?[a-zA-Z0-9])*$">
+                <span id="error">Invalid username</span>
+
+                <div>Hex color code</div>
+                <input type="text" name="log" id="login"
+                pattern="^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$">
+                <span id="error">Invalid hex color code</span>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
